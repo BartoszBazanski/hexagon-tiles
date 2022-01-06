@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+.container {
+  position: relative;
+  width: 1660px;
+  height: 2440px;
+  border: 1px solid black;
+  transform-origin: 0 0;
+  /* transform: scale(0.75) translate(-15%, -15%); */
+  overflow: hidden;
+  background-color: lightgray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.column--1 {
+  position: absolute;
+  bottom: 0;
+  left: calc((1 / 4) * (-125px));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.column--2 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((2 / 4) * 125px);
+}
+
+.column--3 {
+  position: absolute;
+  bottom: 0;
+  left: calc((5 / 4) * 125px);
+}
+
+.column--4 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((8 / 4) * 125px);
+}
+
+.column--5 {
+  position: absolute;
+  bottom: 0;
+  left: calc((11 / 4) * 125px);
+}
+
+.column--6 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((14 / 4) * 125px);
+}
+
+.column--7 {
+  position: absolute;
+  bottom: 0;
+  left: calc((17 / 4) * 125px);
+}
+
+.column--8 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((20 / 4) * 125px);
+}
+
+.column--9 {
+  position: absolute;
+  bottom: 0;
+  left: calc((23 / 4) * 125px);
+}
+
+.column--10 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((26 / 4) * 125px);
+}
+
+.column--11 {
+  position: absolute;
+  bottom: 0;
+  left: calc((29 / 4) * 125px);
+}
+
+.column--12 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((32 / 4) * 125px);
+}
+
+.column--13 {
+  position: absolute;
+  bottom: 0;
+  left: calc((35 / 4) * 125px);
+}
+
+.column--14 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((38 / 4) * 125px);
+}
+
+.column--15 {
+  position: absolute;
+  bottom: 0;
+  left: calc((41 / 4) * 125px);
+}
+
+.column--16 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((44 / 4) * 125px);
+}
+
+.column--17 {
+  position: absolute;
+  bottom: 0;
+  left: calc((47 / 4) * 125px);
+}
+
+.column--18 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((50 / 4) * 125px);
+}
+
+.column--19 {
+  position: absolute;
+  bottom: 0;
+  left: calc((54 / 4) * 125px);
+}
+
+.column--20 {
+  position: absolute;
+  bottom: -55px;
+  left: calc((57 / 4) * 125px);
+}
+
+.hex {
+  stroke: lightgray;
+  stroke-width: 2;
+  fill: #FDFBF4;
+  cursor: pointer;
+}
+
+.hex:hover {
+  stroke: black;
+}
+
+.hex--green {
+  fill: url('#tilePattern');
+}
+
+/* Utility classes */
+
+.p-20 {
+  padding: 20px;
 }
