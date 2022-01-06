@@ -8,7 +8,7 @@ export default function Hex() {
 
   useEffect(() => {
     dispatch({ type: 'incrementCount' })
-  }, [])
+  }, [dispatch])
 
   const toggleActive = () => {
     if (active) {
