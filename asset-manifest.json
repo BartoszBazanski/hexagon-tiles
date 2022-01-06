@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/hexagon-tiles/static/css/main.4048cf7a.css",
+    "main.css": "/hexagon-tiles/static/css/main.2d5ed1d2.css",
     "main.js": "/hexagon-tiles/static/js/main.7e655288.js",
     "static/js/787.385bd770.chunk.js": "/hexagon-tiles/static/js/787.385bd770.chunk.js",
     "static/media/wooden-tile.png": "/hexagon-tiles/static/media/wooden-tile.ee3c8a632da7311f2e80.png",
     "static/media/green-tile.png": "/hexagon-tiles/static/media/green-tile.23eb2625457110bdb689.png",
     "index.html": "/hexagon-tiles/index.html",
-    "main.4048cf7a.css.map": "/hexagon-tiles/static/css/main.4048cf7a.css.map",
+    "main.2d5ed1d2.css.map": "/hexagon-tiles/static/css/main.2d5ed1d2.css.map",
     "main.7e655288.js.map": "/hexagon-tiles/static/js/main.7e655288.js.map",
     "787.385bd770.chunk.js.map": "/hexagon-tiles/static/js/787.385bd770.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4048cf7a.css",
+    "static/css/main.2d5ed1d2.css",
     "static/js/main.7e655288.js"
   ]
 }
