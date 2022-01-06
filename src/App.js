@@ -44,6 +44,7 @@ function App() {
     woodenCount: 0,
   });
   const scale = useMemo(() => (window.innerWidth - 40) / 1660, []);
+  const height = useMemo(() => scale * 2440, [scale]);
   const whiteCount = state.count - state.greenCount - state.woodenCount;
   const floorNumber = (number) => (
     Math.floor(number * 100) / 100
@@ -57,8 +58,7 @@ function App() {
         <p>Green count: {state.greenCount} &lt;--- packages: {floorNumber(state.greenCount / 36)}</p>
         <p>Wooden count: {state.woodenCount} &lt;--- packages: {floorNumber(state.woodenCount / 36)}</p>
       </header>
-      <div className="p-20">
-
+      <div className="p-20" style={{ height: `${height}px`, overflow: 'hidden' }}>
         <div className="container" style={{ transform: `scale(${scale})`}}>
           <Column number={1} />
           <Column number={2} />
