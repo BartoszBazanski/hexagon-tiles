@@ -55,7 +55,7 @@ function App() {
         <h1>Total count: {state.count}</h1>
         <p>White count: {whiteCount} &lt;--- packages: {floorNumber(whiteCount / 36)}</p>
         <p>Green count: {state.greenCount} &lt;--- packages: {floorNumber(state.greenCount / 36)}</p>
-        <p>Green count: {state.woodenCount} &lt;--- packages: {floorNumber(state.woodenCount / 36)}</p>
+        <p>Wooden count: {state.woodenCount} &lt;--- packages: {floorNumber(state.woodenCount / 36)}</p>
       </header>
       <div className="p-20">
 
