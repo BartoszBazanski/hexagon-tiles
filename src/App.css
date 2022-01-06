@@ -137,16 +137,25 @@
 .hex {
   stroke: lightgray;
   stroke-width: 2;
-  fill: #FDFBF4;
   cursor: pointer;
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
 }
 
 .hex:hover {
   stroke: black;
 }
 
+.hex--white {
+  fill: #FDFBF4;
+}
+
 .hex--green {
-  fill: url('#tilePattern');
+  fill: url('#greenTilePattern');
+}
+
+.hex--wooden {
+  fill: url('#woodenTilePattern');
 }
 
 /* Utility classes */

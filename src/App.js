@@ -15,12 +15,22 @@ export function reducer(state, action) {
     case 'incrementGreenCount':
       return {
         ...state,
-        activeCount: state.activeCount + 1,
+        greenCount: state.greenCount + 1,
       };
     case 'decrementGreenCount':
       return {
         ...state,
-        activeCount: state.activeCount - 1,
+        greenCount: state.greenCount - 1,
+      };
+    case 'incrementWoodenCount':
+      return {
+        ...state,
+        woodenCount: state.woodenCount + 1,
+      };
+    case 'decrementWoodenCount':
+      return {
+        ...state,
+        woodenCount: state.woodenCount - 1,
       };
     default:
       throw new Error();
@@ -30,10 +40,11 @@ export function reducer(state, action) {
 function App() {
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
-    activeCount: 0,
+    greenCount: 0,
+    woodenCount: 0,
   });
   const scale = useMemo(() => (window.innerWidth - 40) / 1660, []);
-  const whiteCount = state.count - state.activeCount;
+  const whiteCount = state.count - state.greenCount - state.woodenCount;
   const floorNumber = (number) => (
     Math.floor(number * 100) / 100
   );
@@ -42,8 +53,9 @@ function App() {
     <AppContext.Provider value={{ dispatch }}>
       <header className="p-20">
         <h1>Total count: {state.count}</h1>
-        <p>Green count: {state.activeCount} &lt;--- packages: {floorNumber(state.activeCount / 36)}</p>
         <p>White count: {whiteCount} &lt;--- packages: {floorNumber(whiteCount / 36)}</p>
+        <p>Green count: {state.greenCount} &lt;--- packages: {floorNumber(state.greenCount / 36)}</p>
+        <p>Green count: {state.woodenCount} &lt;--- packages: {floorNumber(state.woodenCount / 36)}</p>
       </header>
       <div className="p-20">
 
