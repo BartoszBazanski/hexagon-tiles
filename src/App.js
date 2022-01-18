@@ -69,7 +69,8 @@ function App() {
           <div className={`container__side container__side--left
             ${transform ? 'container__side--transform-left' : ''}
           `}>
-            <Column className="column--absolute" componentNumber={8} component={Tile} />
+            <Column className="column--with-tiles-1" componentNumber={8} component={Tile} />
+            <Column className="column--with-tiles-2" componentNumber={8} component={Tile} />
             <Column componentNumber={8} component={Tile} />
           </div>
           <div className={`container__side container__side--right

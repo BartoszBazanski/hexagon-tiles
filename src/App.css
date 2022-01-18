@@ -24,11 +24,11 @@
   align-items: flex-end;
   border-right: 2px solid grey;
   transform-origin: 100% 100%;
-  transform: rotateX(0) rotateY(0) skewY(0) translateY(0);
+  transform: rotateX(0) rotateY(0) skewY(0) translateY(0) translateX(0);
 }
 
 .container__side--transform-left {
-  transform: rotateX(-45deg) rotateY(-45deg) skewY(-45deg) translateY(-1100px);
+  transform: rotateX(-45deg) rotateY(-45deg) skewY(-45deg) translateY(-1100px) translateX(500px);
 }
 
 .container__side--right {
@@ -38,11 +38,11 @@
   height: 2700px;
   overflow: hidden;
   transform-origin: 0 100%;
-  transform: rotateX(0) rotateY(0) skewY(0) translateY(0);
+  transform: rotateX(0) rotateY(0) skewY(0) translateY(0) translateX(0);
 }
 
 .container__side--transform-right {
-  transform: rotateX(-45deg) rotateY(45deg) skewY(45deg) translateY(-1100px);
+  transform: rotateX(-45deg) rotateY(45deg) skewY(45deg) translateY(-1390px) translateX(500px);
 }
 
 .container__side--floor {
@@ -50,14 +50,15 @@
   top: 100%;
   left: 608px;
   right: 0;
-  height: 608px;
+  height: calc(2 * 608px);
+  width: calc(2 * 1660px);
   background-image: url('./fargo-gold.png');
   transform-origin: 0 0;
-  transform: translateY(0) rotateZ(0) skewX(0);
+  transform: translateY(0) translateX(0) rotateZ(0) skewX(0);
 }
 
 .container__side--transform-floor {
-  transform: translateY(-778px) rotateZ(16.25deg) skewX(-57deg);
+  transform: translateY(-880px) translateX(355px) rotateZ(16.3deg) skewX(-57.5deg);
 }
 
 .column {
@@ -65,10 +66,16 @@
   flex-direction: column;
 }
 
-.column--absolute {
+.column--with-tiles-1 {
   position: absolute;
   bottom: 0;
   right: 608px;
+}
+
+.column--with-tiles-2 {
+  position: absolute;
+  bottom: 0;
+  right: calc(2 * 608px);
 }
 
 .column--1 {
@@ -220,8 +227,6 @@
   fill: #FDFBF4;
   stroke: lightgray;
   stroke-width: 2;
-  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
 }
 
 /* Utility classes */
