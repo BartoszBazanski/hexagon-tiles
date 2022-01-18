@@ -1,11 +1,63 @@
+:root {
+  --bottom: -66px;
+}
+
 .container {
-  position: relative;
-  width: 1660px;
-  height: 2440px;
+  display: flex;
+  width: calc(1660px + 608px);
   border: 1px solid black;
   transform-origin: 0 0;
-  overflow: hidden;
   background-color: lightgray;
+  overflow: hidden;
+  position: relative;
+}
+
+.container__side {
+  flex: 1 1 0;
+  transition: transform 1s linear;
+}
+
+.container__side--left {
+  position: relative;
+  display: flex;
+  flex: 0 0 608px;
+  align-items: flex-end;
+  border-right: 2px solid grey;
+  transform-origin: 100% 100%;
+  transform: rotateX(0) rotateY(0) skewY(0) translateY(0);
+}
+
+.container__side--transform-left {
+  transform: rotateX(-45deg) rotateY(-45deg) skewY(-45deg) translateY(-1100px);
+}
+
+.container__side--right {
+  position: relative;
+  flex: 0 0 1660px;
+  width: 1660px;
+  height: 2700px;
+  overflow: hidden;
+  transform-origin: 0 100%;
+  transform: rotateX(0) rotateY(0) skewY(0) translateY(0);
+}
+
+.container__side--transform-right {
+  transform: rotateX(-45deg) rotateY(45deg) skewY(45deg) translateY(-1100px);
+}
+
+.container__side--floor {
+  position: absolute;
+  top: 100%;
+  left: 608px;
+  right: 0;
+  height: 608px;
+  background-image: url('./fargo-gold.png');
+  transform-origin: 0 0;
+  transform: translateY(0) rotateZ(0) skewX(0);
+}
+
+.container__side--transform-floor {
+  transform: translateY(-778px) rotateZ(16.25deg) skewX(-57deg);
 }
 
 .column {
@@ -13,123 +65,129 @@
   flex-direction: column;
 }
 
-.column--1 {
+.column--absolute {
   position: absolute;
   bottom: 0;
+  right: 608px;
+}
+
+.column--1 {
+  position: absolute;
+  bottom: var(--bottom);
   left: calc((1 / 4) * (-125px));
 }
 
 .column--2 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((2 / 4) * 125px);
 }
 
 .column--3 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((5 / 4) * 125px);
 }
 
 .column--4 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((8 / 4) * 125px);
 }
 
 .column--5 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((11 / 4) * 125px);
 }
 
 .column--6 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((14 / 4) * 125px);
 }
 
 .column--7 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((17 / 4) * 125px);
 }
 
 .column--8 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((20 / 4) * 125px);
 }
 
 .column--9 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((23 / 4) * 125px);
 }
 
 .column--10 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((26 / 4) * 125px);
 }
 
 .column--11 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((29 / 4) * 125px);
 }
 
 .column--12 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((32 / 4) * 125px);
 }
 
 .column--13 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((35 / 4) * 125px);
 }
 
 .column--14 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((38 / 4) * 125px);
 }
 
 .column--15 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((41 / 4) * 125px);
 }
 
 .column--16 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((44 / 4) * 125px);
 }
 
 .column--17 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((47 / 4) * 125px);
 }
 
 .column--18 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((50 / 4) * 125px);
 }
 
 .column--19 {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: calc((54 / 4) * 125px);
 }
 
 .column--20 {
   position: absolute;
-  bottom: -55px;
+  bottom: calc(-55px + var(--bottom));
   left: calc((57 / 4) * 125px);
 }
 
@@ -156,6 +214,14 @@
 
 .hex--wooden {
   fill: url('#woodenTilePattern');
+}
+
+.tile {
+  fill: #FDFBF4;
+  stroke: lightgray;
+  stroke-width: 2;
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
 }
 
 /* Utility classes */

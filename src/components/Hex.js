@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../App';
 import greenTilePattern from '../green-tile.png';
 import woodenTilePattern from '../wooden-tile.png';

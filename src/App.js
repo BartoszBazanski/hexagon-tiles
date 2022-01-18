@@ -1,7 +1,8 @@
-import React, { useMemo, useReducer } from 'react';
+import React, { useMemo, useReducer, useState } from 'react';
 
 import './App.css';
 import Column from './components/Column';
+import Tile from './components/Tile';
 
 export const AppContext = React.createContext({});
 
@@ -43,12 +44,16 @@ function App() {
     greenCount: 0,
     woodenCount: 0,
   });
-  const scale = useMemo(() => (window.innerWidth - 40) / 1660, []);
-  const height = useMemo(() => scale * 2440, [scale]);
+  const [transform, setTransform] = useState(false);
+  const scale = useMemo(() => (window.innerWidth - 40) / (1660 + 608), []);
+  const height = useMemo(() => scale * 2700, [scale]);
   const whiteCount = state.count - state.greenCount - state.woodenCount;
   const floorNumber = (number) => (
     Math.floor(number * 100) / 100
   );
+  const toggleTransform = () => {
+    setTransform(!transform);
+  };
 
   return (
     <AppContext.Provider value={{ dispatch }}>
@@ -57,29 +62,41 @@ function App() {
         <p>White count: {whiteCount} &lt;--- packages: {floorNumber(whiteCount / 36)}</p>
         <p>Green count: {state.greenCount} &lt;--- packages: {floorNumber(state.greenCount / 36)}</p>
         <p>Wooden count: {state.woodenCount} &lt;--- packages: {floorNumber(state.woodenCount / 36)}</p>
+        <button onClick={toggleTransform}>Transform</button>
       </header>
-      <div className="p-20" style={{ height: `${height}px`, overflow: 'hidden' }}>
-        <div className="container" style={{ transform: `scale(${scale})`}}>
-          <Column number={1} />
-          <Column number={2} />
-          <Column number={3} />
-          <Column number={4} />
-          <Column number={5} />
-          <Column number={6} />
-          <Column number={7} />
-          <Column number={8} />
-          <Column number={9} />
-          <Column number={10} />
-          <Column number={11} />
-          <Column number={12} />
-          <Column number={13} />
-          <Column number={14} />
-          <Column number={15} />
-          <Column number={16} />
-          <Column number={17} />
-          <Column number={18} />
-          {/* <Column number={19} /> */}
-          {/* <Column number={20} /> */}
+      <div className="p-20" style={{ height: `${height}px`, overflowX: 'visible' }}>
+        <div className="container" style={{ transform: `scale(${scale})` }}>
+          <div className={`container__side container__side--left
+            ${transform ? 'container__side--transform-left' : ''}
+          `}>
+            <Column className="column--absolute" componentNumber={8} component={Tile} />
+            <Column componentNumber={8} component={Tile} />
+          </div>
+          <div className={`container__side container__side--right
+            ${transform ? 'container__side--transform-right' : ''}
+          `}>
+            <Column colNumber={1} componentNumber={23} />
+            <Column colNumber={2} componentNumber={23} />
+            <Column colNumber={3} />
+            <Column colNumber={4} componentNumber={23} />
+            <Column colNumber={5} />
+            <Column colNumber={6} componentNumber={23} />
+            <Column colNumber={7} />
+            <Column colNumber={8} componentNumber={23} />
+            <Column colNumber={9} />
+            <Column colNumber={10} componentNumber={23} />
+            <Column colNumber={11} />
+            <Column colNumber={12} componentNumber={23} />
+            <Column colNumber={13} />
+            <Column colNumber={14} componentNumber={23} />
+            <Column colNumber={15} />
+            <Column colNumber={16} componentNumber={23} />
+            <Column colNumber={17} />
+            <Column colNumber={18} componentNumber={23} />
+          </div>
+          <div className={`container__side--floor
+            ${transform ? 'container__side--transform-floor' : ''}
+          `} />
         </div>
       </div>
     </AppContext.Provider>

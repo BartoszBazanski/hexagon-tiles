@@ -1,16 +1,20 @@
+import classnames from 'classnames';
 import React from 'react';
 
 import Hex from './Hex';
 
-export default function Column({ number }) {
-  const hexArray = [...Array(21).keys()];
-  const isNumber = number && typeof number === 'number';
-  const className = `column ${isNumber && `column--${number}`}`;
+export default function Column({ colNumber, componentNumber = 23, component = Hex, className }) {
+  const hexArray = [...Array(componentNumber).keys()];
+  const isNumber = colNumber && typeof colNumber === 'number';
+  const classNames = classnames('column', className, {
+    [`column--${colNumber}`]: isNumber,
+  });
+  const Component = component;
 
   return (
-    <div className={className}>
+    <div className={classNames}>
       {hexArray.map((key) => (
-        <Hex key={`${number-key}`} />
+        <Component key={`${colNumber}-${key}`} />
       ))}
     </div>
   )
