@@ -62,7 +62,7 @@ function App() {
         <p>White count: {whiteCount} &lt;--- packages: {floorNumber(whiteCount / 36)}</p>
         <p>Green count: {state.greenCount} &lt;--- packages: {floorNumber(state.greenCount / 36)}</p>
         <p>Wooden count: {state.woodenCount} &lt;--- packages: {floorNumber(state.woodenCount / 36)}</p>
-        <button onClick={toggleTransform}>Transform</button>
+        <button onClick={toggleTransform}>Show visualization</button>
       </header>
       <div className="p-20" style={{ height: `${height}px`, overflowX: 'visible' }}>
         <div className="container" style={{ transform: `scale(${scale})` }}>
