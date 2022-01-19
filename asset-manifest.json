@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/hexagon-tiles/static/css/main.1be5d090.css",
-    "main.js": "/hexagon-tiles/static/js/main.5e889158.js",
+    "main.css": "/hexagon-tiles/static/css/main.7552b4d7.css",
+    "main.js": "/hexagon-tiles/static/js/main.51c799c7.js",
     "static/js/787.385bd770.chunk.js": "/hexagon-tiles/static/js/787.385bd770.chunk.js",
     "static/media/wooden-tile.png": "/hexagon-tiles/static/media/wooden-tile.ee3c8a632da7311f2e80.png",
     "static/media/green-tile.png": "/hexagon-tiles/static/media/green-tile.23eb2625457110bdb689.png",
     "static/media/fargo-gold.png": "/hexagon-tiles/static/media/fargo-gold.667cd65ec9ccb2f0ba18.png",
     "index.html": "/hexagon-tiles/index.html",
-    "main.1be5d090.css.map": "/hexagon-tiles/static/css/main.1be5d090.css.map",
-    "main.5e889158.js.map": "/hexagon-tiles/static/js/main.5e889158.js.map",
+    "main.7552b4d7.css.map": "/hexagon-tiles/static/css/main.7552b4d7.css.map",
+    "main.51c799c7.js.map": "/hexagon-tiles/static/js/main.51c799c7.js.map",
     "787.385bd770.chunk.js.map": "/hexagon-tiles/static/js/787.385bd770.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1be5d090.css",
-    "static/js/main.5e889158.js"
+    "static/css/main.7552b4d7.css",
+    "static/js/main.51c799c7.js"
   ]
 }
