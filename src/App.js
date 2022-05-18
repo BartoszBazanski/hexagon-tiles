@@ -95,7 +95,7 @@ function App() {
             <Column colNumber={17} />
             <Column colNumber={18} componentNumber={23} />
           </div>
-          <div className={`container__side--floor
+          <div className={`container__side container__side--floor
             ${transform ? 'container__side--transform-floor' : ''}
           `} />
         </div>

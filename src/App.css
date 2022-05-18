@@ -10,11 +10,14 @@
   background-color: lightgray;
   overflow: hidden;
   position: relative;
+  perspective: 1000px;
+  perspective-origin: top right;
 }
 
 .container__side {
   flex: 1 1 0;
   transition: transform 1s linear;
+  transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 }
@@ -26,11 +29,11 @@
   align-items: flex-end;
   border-right: 2px solid grey;
   transform-origin: 100% 100%;
-  transform: rotateX(0) rotateY(0) skewY(0) translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) rotateX(0);
 }
 
 .container__side--transform-left {
-  transform: rotateX(-45deg) rotateY(-45deg) skewY(-45deg) translate3d(500px, -1100px, 0);
+  transform: translate3d(0, 0, -200px) rotateY(90deg);
 }
 
 .container__side--right {
@@ -40,11 +43,11 @@
   height: 2700px;
   overflow: hidden;
   transform-origin: 0 100%;
-  transform: rotateX(0) rotateY(0) skewY(0) translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .container__side--transform-right {
-  transform: rotateX(-45deg) rotateY(45deg) skewY(45deg) translate3d(500px, -1390px, 0);
+  transform: translate3d(0, 0, -200px);
 }
 
 .container__side--floor {
@@ -56,11 +59,11 @@
   width: calc(2 * 1660px);
   background-image: url('./fargo-gold.png');
   transform-origin: 0 0;
-  transform: translate3d(0, 0, 0) rotateZ(0) skewX(0);
+  transform: translate3d(0, 0, 0) rotateX(0);
 }
 
 .container__side--transform-floor {
-  transform: translate3d(355px, -880px, 0) rotateZ(16.3deg) skewX(-57.5deg);
+  transform: translate3d(0, 0, -200px) rotateX(90deg);
 }
 
 .column {
