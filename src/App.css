@@ -4,14 +4,15 @@
 
 .container {
   display: flex;
-  width: calc(1660px + 608px);
+  /* width: calc(1660px + 608px); */
+  width: calc(1660px);
   border: 1px solid black;
   transform-origin: 0 0;
   background-color: lightgray;
   overflow: hidden;
   position: relative;
-  perspective: 2000px;
-  perspective-origin: top right;
+  perspective: 3000px;
+  perspective-origin: center right;
 }
 
 .container__side {
@@ -26,6 +27,7 @@
   position: relative;
   display: flex;
   flex: 0 0 608px;
+  width: 608px;
   align-items: flex-end;
   border-right: 2px solid grey;
   transform-origin: 100% 100%;
@@ -33,7 +35,7 @@
 }
 
 .container__side--transform-left {
-  transform: translate3d(0, 0, -200px) rotateY(90deg);
+  transform: translate3d(0, -200px, -200px) rotateY(90deg);
 }
 
 .container__side--right {
@@ -47,7 +49,7 @@
 }
 
 .container__side--transform-right {
-  transform: translate3d(0, 0, -200px);
+  transform: translate3d(0, -200px, -200px);
 }
 
 .container__side--floor {
@@ -63,7 +65,7 @@
 }
 
 .container__side--transform-floor {
-  transform: translate3d(0, 0, -200px) rotateX(90deg);
+  transform: translate3d(0, -200px, -200px) rotateX(90deg);
 }
 
 .column {

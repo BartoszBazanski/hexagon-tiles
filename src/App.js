@@ -45,7 +45,8 @@ function App() {
     woodenCount: 0,
   });
   const [transform, setTransform] = useState(false);
-  const scale = useMemo(() => (window.innerWidth - 40) / (1660 + 608), []);
+  // const scale = useMemo(() => (window.innerWidth - 40) / (1660 + 608), []);
+  const scale = useMemo(() => (window.innerWidth - 40) / (1660), []);
   const height = useMemo(() => scale * 2700, [scale]);
   const whiteCount = state.count - state.greenCount - state.woodenCount;
   const floorNumber = (number) => (
@@ -66,13 +67,13 @@ function App() {
       </header>
       <div className="p-20" style={{ height: `${height}px`, overflowX: 'visible' }}>
         <div className="container" style={{ transform: `scale(${scale})` }}>
-          <div className={`container__side container__side--left
+          {/* <div className={`container__side container__side--left
             ${transform ? 'container__side--transform-left' : ''}
           `}>
             <Column className="column--with-tiles-1" componentNumber={8} component={Tile} />
             <Column className="column--with-tiles-2" componentNumber={8} component={Tile} />
             <Column componentNumber={8} component={Tile} />
-          </div>
+          </div> */}
           <div className={`container__side container__side--right
             ${transform ? 'container__side--transform-right' : ''}
           `}>
